@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J. Cillizza Art Shows 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .flyer {
+                page-break-after: always;
+            }
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .flyer {
+            width: 8.5in;
+            height: 11in;
+            margin: 0 auto;
+            background: white;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0b0b0b 0%, #1a1a1a 100%);
+            color: #e8b84b;
+            padding: 0.4in;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            letter-spacing: -2px;
+            margin-bottom: 0.1in;
+        }
+
+        .header p {
+            font-size: 0.7em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ccc;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.3in;
+            padding: 0.3in;
+            align-items: center;
+        }
+
+        .artwork-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .artwork-section img {
+            max-width: 100%;
+            max-height: 3.5in;
+            object-fit: contain;
+            border: 3px solid #e8b84b;
+        }
+
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 0.2in;
+        }
+
+        .show-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #0b0b0b;
+            margin-bottom: 0.15in;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .shows {
+            margin-bottom: 0.2in;
+        }
+
+        .show {
+            margin-bottom: 0.15in;
+            border-left: 4px solid #e8b84b;
+            padding-left: 0.15in;
+        }
+
+        .show-city {
+            font-size: 0.95em;
+            font-weight: 700;
+            color: #0b0b0b;
+        }
+
+        .show-date {
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .divider {
+            height: 2px;
+            background: #e8b84b;
+            margin: 0.15in 0;
+        }
+
+        .contact {
+            font-size: 0.8em;
+            text-align: center;
+            margin-top: 0.15in;
+            padding: 0.15in;
+            background: #f9f9f9;
+            border-radius: 4px;
+        }
+
+        .contact a {
+            color: #e8b84b;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .footer {
+            background: #0b0b0b;
+            color: #e8b84b;
+            padding: 0.2in;
+            text-align: center;
+            font-size: 0.7em;
+            letter-spacing: 1px;
+        }
+
+        .accent {
+            color: #e8b84b;
+        }
+
+        /* Decorative elements */
+        .decoration {
+            position: absolute;
+            opacity: 0.05;
+            font-size: 8em;
+            font-weight: 700;
+        }
+
+        .decoration-top {
+            top: -0.5in;
+            right: -0.5in;
+        }
+
+        .decoration-bottom {
+            bottom: -0.5in;
+            left: -0.5in;
+        }
+
+        @media (max-width: 900px) {
+            .flyer {
+                width: 100%;
+                height: auto;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+                gap: 0.2in;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .show-title {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flyer">
+        <div class="decoration decoration-top">JTC3</div>
+        <div class="decoration decoration-bottom">ART</div>
+
+        <div class="header">
+            <h1>J. CILLIZZA</h1>
+            <p>Art & Abstraction</p>
+        </div>
+
+        <div class="content">
+            <div class="artwork-section">
+                <img src="Screenshot_2026-05-08_at_5_19_18_AM.png" alt="Mickey's LV Fever Dream">
+            </div>
+
+            <div class="info-section">
+                <div class="show-title">Upcoming Shows</div>
+
+                <div class="shows">
+                    <div class="show">
+                        <div class="show-city">HARTFORD</div>
+                        <div class="show-date">Thursday, June 13</div>
+                    </div>
+
+                    <div class="show">
+                        <div class="show-city">BOSTON</div>
+                        <div class="show-date">July 2026</div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="contact">
+                    Follow & Share<br>
+                    <a href="https://instagram.com/jtc3designs" target="_blank">@jtc3designs</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Exploring the Chaos, Contradiction & Absurdity of Existence
+        </div>
+    </div>
+
+    <script>
+        // Print-friendly: trigger print dialog on load if ?print=1
+        if (new URLSearchParams(window.location.search).get('print') === '1') {
+            window.print();
+        }
+    </script>
+</body>
+</html>
